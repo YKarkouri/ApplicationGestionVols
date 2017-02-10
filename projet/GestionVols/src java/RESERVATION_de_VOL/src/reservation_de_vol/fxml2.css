@@ -1,0 +1,58 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+ 
+  .background {
+    -fx-background-color : #B3E5FC;
+    }
+
+.sectionTitle {
+    -fx-text-fill   : #01579B;
+    -fx-font-weight : bolder;
+    -fx-font-size   : 14px;
+    }
+
+.warningText {
+    -fx-fill : #0277BD;
+    }
+
+.inputSection {
+    -fx-background-color : #E1F5FE;
+    }
+
+.button {
+    -fx-background-color : #29B6F6;
+    -fx-text-fill        : #E1F5FE;
+    -fx-font-weight      : 900;
+    }
+
+.button:hover {
+    -fx-background-color : #01579B;
+    }
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #B3E5FC;
+    
+}
+
+.table-view .column-header-background{
+   
+     -fx-background-color : #B3E5FC;
+    -fx-text-fill        : #E1F5FE;
+    -fx-font-weight      : 900;
+}
+.tab-pane .tab:selected{
+    -fx-background-color: #01579B;
+}
+.titlePane {
+    -fx-background-color : #29B6F6;
+    -fx-text-fill        : blue;
+    -fx-font-weight      : 900;
+    }
+
+.titlePane:hover {
+    -fx-background-color : #01579B;
+    }
+}

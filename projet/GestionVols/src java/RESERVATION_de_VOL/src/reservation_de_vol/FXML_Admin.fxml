@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="fx2" prefHeight="637.000199999995" prefWidth="673.0" style=" -fx-background-color : #B3E5FC;" styleClass="null" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="reservation_de_vol.AdminController">
+  <children>
+    <TabPane prefHeight="637.0" prefWidth="673.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <tabs>
+        <Tab styleClass="button" text="Crier un vol              ">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="499.0000999999975" prefWidth="634.0" style=" -fx-background-color : #B3E5FC;">
+              <children>
+                <Accordion prefHeight="508.0" prefWidth="647.0" AnchorPane.bottomAnchor="67.5" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="3.5">
+                  <expandedPane>
+                    <TitledPane fx:id="x3" animated="false" expanded="true" prefHeight="540.0" prefWidth="673.0" style=" -fx-background-color : #B3E5FC;" styleClass="titlePane" text="Escales">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style=" -fx-background-color : #B3E5FC;">
+                          <children>
+                            <GridPane layoutX="14.0" layoutY="43.0" prefHeight="159.0" prefWidth="559.0">
+                              <children>
+                                <Label prefWidth="149.0" text="heure arrivee" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label prefWidth="137.0" text="heure depart" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                  <children>
+                                    <ChoiceBox fx:id="aeroEscale" prefWidth="175.0" styleClass="button" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                      <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                          <String fx:value="Item 1" />
+                                          <String fx:value="Item 2" />
+                                          <String fx:value="Item 3" />
+                                        </FXCollections>
+                                      </items>
+                                    </ChoiceBox>
+                                  </children>
+                                  <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  </columnConstraints>
+                                  <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  </rowConstraints>
+                                </GridPane>
+                                <TextField id="heArriveEscale" fx:id="hreArriveEscale" prefHeight="22.0" prefWidth="357.0" promptText="xx:xx" styleClass="inputSection" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <TextField id="heurDepartEscale" fx:id="hreDepartEscale" prefWidth="364.0" promptText="xx:xx" styleClass="inputSection" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label prefWidth="131.0" text="Aeroport d'escale" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                <Button fx:id="ajouerEscale" mnemonicParsing="false" onAction="#handlersButton" prefHeight="27.0" prefWidth="85.0" text="ajouter" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              </children>
+                              <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="371.0" minWidth="10.0" prefWidth="95.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="357.0" minWidth="0.0" prefWidth="276.0" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              </rowConstraints>
+                            </GridPane>
+                            <Label fx:id="escaleLab" layoutX="216.0" layoutY="280.0" prefWidth="374.0" text="" />
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </TitledPane>
+                  </expandedPane>
+                  <panes>
+                    <TitledPane fx:id="x1" animated="false" style=" -fx-background-color : #B3E5FC;" styleClass="titlePane" text="Vol">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style=" -fx-background-color : #B3E5FC;">
+                          <children>
+                            <GridPane prefHeight="309.0" prefWidth="554.5" AnchorPane.bottomAnchor="85.5" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="74.5" AnchorPane.topAnchor="43.5">
+                              <children>
+                                <Label prefWidth="143.0" text="Date Depart" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label prefWidth="147.0" text="heure Depart" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <TextField fx:id="dateDepartVol" prefWidth="200.0" promptText="xx/xx/xxxx" styleClass="inputSection" text="" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <Label prefWidth="125.0" text="Num de vol" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                                <GridPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                  <children>
+                                    <TextField fx:id="numVol" prefWidth="364.0" styleClass="inputSection" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                  </children>
+                                  <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  </columnConstraints>
+                                  <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  </rowConstraints>
+                                </GridPane>
+                                <TextField fx:id="heurDepartVol" prefWidth="200.0" promptText="xx:xx" styleClass="inputSection" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label prefWidth="125.0" text="Aeroport depart" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                                <Label prefWidth="125.0" text="Aeroport d'arrivee" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                                <ChoiceBox fx:id="aerDeparVol" prefHeight="22.0001220703125" prefWidth="182.0" styleClass="button" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                  <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                      <String fx:value="Item 1" />
+                                      <String fx:value="Item 2" />
+                                      <String fx:value="Item 3" />
+                                    </FXCollections>
+                                  </items>
+                                </ChoiceBox>
+                                <ChoiceBox fx:id="aerArriveVol" prefHeight="22.0" prefWidth="182.0" styleClass="button" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                  <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                      <String fx:value="Item 1" />
+                                      <String fx:value="Item 2" />
+                                      <String fx:value="Item 3" />
+                                    </FXCollections>
+                                  </items>
+                                </ChoiceBox>
+                                <TextField fx:id="dateArriveVol" prefWidth="364.0" promptText="xx/xx/xxxx" styleClass="inputSection" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <TextField fx:id="heurArriveVol" prefWidth="364.0" promptText="xx:xx" styleClass="inputSection" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <GridPane id="capaciteVol" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                  <children>
+                                    <TextField fx:id="capaciteVol" prefWidth="364.0" styleClass="inputSection" text="" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                  </children>
+                                  <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  </columnConstraints>
+                                  <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  </rowConstraints>
+                                </GridPane>
+                                <Label prefWidth="135.0" text="Date Arivee" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                <Label prefWidth="139.0" text="heure Arrrivee" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                                <Label prefWidth="126.0" text="Capacitee" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                              </children>
+                              <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="190.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="364.0" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                              </rowConstraints>
+                            </GridPane>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </TitledPane>
+                    <TitledPane fx:id="x4" animated="false" style=" -fx-background-color : #B3E5FC;" styleClass="titlePane" text="Aeroport">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style=" -fx-background-color : #B3E5FC;">
+                          <children>
+                            <GridPane prefHeight="235.5" prefWidth="514.0" AnchorPane.bottomAnchor="147.25" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="55.25">
+                              <children>
+                                <Label text="ville" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                <Label text="pays" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                                <Label prefWidth="158.0" text="Nom Aeroport" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label prefWidth="134.0" text="Num Aeroport" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                  <children>
+                                    <TextField fx:id="numAeroport" prefWidth="364.0" styleClass="inputSection" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                  </children>
+                                  <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  </columnConstraints>
+                                  <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  </rowConstraints>
+                                </GridPane>
+                                <TextField fx:id="nomAeroport" prefWidth="364.0" styleClass="inputSection" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <TextField fx:id="villeAeroport" prefWidth="364.0" styleClass="inputSection" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <TextField fx:id="paysAeroport" prefWidth="364.0" styleClass="inputSection" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <Button fx:id="ajouterAerobtn" mnemonicParsing="false" onAction="#handlersButton" prefHeight="27.0" prefWidth="96.00009999999747" text="ajouter" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              </children>
+                              <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.0" minWidth="10.0" prefWidth="179.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="345.0" minWidth="10.0" prefWidth="335.0" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              </rowConstraints>
+                            </GridPane>
+                            <Label layoutX="156.0" layoutY="14.0" text="ajouter Aeroport" />
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </TitledPane>
+                    <fx:reference source="x3" />
+                  </panes>
+                </Accordion>
+                <Button fx:id="confirmerVolBtn" layoutX="458.0" layoutY="527.0" mnemonicParsing="false" onAction="#handlersButton" prefHeight="27.0" prefWidth="96.0" text="Confirmer" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab styleClass="button" text="consulter les vols  ">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style=" -fx-background-color : #B3E5FC;">
+              <children>
+                <Accordion layoutX="14.0" layoutY="0.0" prefHeight="558.0" prefWidth="644.9999000000025">
+                  <expandedPane>
+                    <TitledPane fx:id="x2" animated="false" style=" -fx-background-color : #B3E5FC;" styleClass="titlePane" text="Vols fermes">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style=" -fx-background-color : #B3E5FC;">
+                          <children>
+                            <TableView fx:id="volFermTable" layoutX="12.0" layoutY="0.0" prefHeight="341.0" prefWidth="615.0">
+                              <columns>
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="num Vol" fx:id="numVolFerCol" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="125.0" text="Date depart" fx:id="dteDepFerCol" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="112.0" text="Heure Depart" fx:id="hreDepFerCol" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="103.0" text="Aeroport Depart" fx:id="aerDepFerCol" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="112.0" text="Aeroport Arrivee" fx:id="aerArrivFerCol" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="60.0" text="capacite" fx:id="capaciteFerCol" />
+                              </columns>
+                            </TableView>
+                            <GridPane layoutX="0.0" layoutY="354.0" prefWidth="627.0">
+                              <children>
+                                <GridPane prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                                  <children>
+                                    <Button id="ouvrVolBtn" fx:id="ouvrirVolBtn" mnemonicParsing="false" onAction="#handlersButton" prefHeight="30.0" prefWidth="94.0" text="Ovrir vol" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                  </children>
+                                  <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="10.0" prefWidth="94.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+                                  </columnConstraints>
+                                  <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  </rowConstraints>
+                                </GridPane>
+                                <Button id="voirVolFer" fx:id="voirFerBtn" mnemonicParsing="false" onAction="#handlersButton" prefHeight="29.0" prefWidth="90.0" text="Voir" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                              </children>
+                              <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="105.0" minWidth="10.0" prefWidth="105.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="104.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="104.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="5.0" prefWidth="99.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="214.0" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              </rowConstraints>
+                            </GridPane>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </TitledPane>
+                  </expandedPane>
+                  <panes>
+                    <TitledPane fx:id="x5" animated="false" style=" -fx-background-color : #B3E5FC;" styleClass="titlePane" text="Vols ouverts">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="510.0" prefWidth="507.0" style=" -fx-background-color : #B3E5FC;">
+                          <children>
+                            <TableView fx:id="volOuverTable" layoutX="0.0" layoutY="0.0" prefHeight="333.0" prefWidth="627.0">
+                              <columns>
+                                <TableColumn prefWidth="75.0" text="num Vol" fx:id="numVolOuverCol" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="115.0" text="Date depart" fx:id="dteDepOuverCol" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="114.0" text="Heure Depart" fx:id="hreDepOuverCol" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="116.0" text="Aeroport depart" fx:id="aeroDepOuverCol" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="108.0" text="Aeroport Arrivee" fx:id="aerArrivOuverCol" />
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="84.0" text="capacite" fx:id="capaciteOuverCol" />
+                              </columns>
+                            </TableView>
+                            <GridPane layoutX="0.0" layoutY="354.0" prefWidth="629.0">
+                              <children>
+                                <GridPane prefHeight="30.0" prefWidth="231.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                                  <children>
+                                    <Button fx:id="fermVolBtn" mnemonicParsing="false" onAction="#handlersButton" prefHeight="30.0" prefWidth="101.0" text="Fermer vol" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                  </children>
+                                  <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="118.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.0" minWidth="10.0" prefWidth="102.0" />
+                                  </columnConstraints>
+                                  <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  </rowConstraints>
+                                </GridPane>
+                                <Button fx:id="VoirOuvBtn" mnemonicParsing="false" onAction="#handlersButton" prefHeight="30.0" prefWidth="100.0" text="Voir" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                              </children>
+                              <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="83.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="88.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="111.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="6.0" prefWidth="198.0" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              </rowConstraints>
+                            </GridPane>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </TitledPane>
+                    <fx:reference source="x2" />
+                  </panes>
+                </Accordion>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab styleClass="button" text="Espace Client      ">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style=" -fx-background-color : #B3E5FC;">
+              <children>
+                <Button id="btn2" fx:id="revenirBtn" layoutX="187.0" layoutY="228.0" mnemonicParsing="false" onAction="#loderEspaceClient" prefHeight="31.0" prefWidth="299.0" text="Revenir a l'espaceClient" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+  <stylesheets>
+    <URL value="@fxml2.css" />
+  </stylesheets>
+</AnchorPane>

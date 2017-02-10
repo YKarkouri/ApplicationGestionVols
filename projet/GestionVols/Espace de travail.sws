@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?PowerDesigner signature="Workspace" version="15.1.0.2850"?>
+<!-- Veuillez ne pas modifier ce fichier -->
+
+<Workspace>
+	<Local Expanded="Yes">
+		<Model Expanded="Yes" ID="{89B1839F-7C96-4090-AB70-5A34434C939E}" Loaded="No" Name="GestionVols" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="GestionVols.prj"/>
+		<Model Expanded="Yes" ID="{DE90F16F-C28E-4117-B718-9988503099D3}" Loaded="No" Name="MLD" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="MLD.mpd"/>
+		<Model Expanded="Yes" ID="{06501588-2B88-4453-80CD-40771F5B1F2B}" Loaded="No" Name="Gestion_Vols" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="/Users/wucef/Desktop/Gestion_Vols/Gestion_Vols.prj"/>
+		<Model Expanded="Yes" ID="{A1F37FDB-1BC7-4BC1-9FF8-1976E6EC027D}" Loaded="No" Name="ModeleOrienteObjet" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="/Users/wucef/Desktop/Gestion_Vols/ModeleOrienteObjet.moo"/>
+		<Model Expanded="Yes" ID="{06501588-2B88-4453-80CD-40771F5B1F2B}" Loaded="No" Name="Gestion_Vols" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="/Users/wucef/Desktop/Gestion_Vols/Gestion_Vols.prj"/>
+		<Model Expanded="Yes" ID="{89B1839F-7C96-4090-AB70-5A34434C939E}" Name="GestionVols" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="GestionVols.prj"/>
+	</Local>
+	<BrowserModule Name="Référentiel"/>
+</Workspace>
